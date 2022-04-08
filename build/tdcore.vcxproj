@@ -1,0 +1,782 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A22DC7F4-9AA3-3201-B5A5-277E19A46D70}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>tdcore</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Vort\td\Bot\BotMovieVort\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tdcore.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tdcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Vort\td\Bot\BotMovieVort\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tdcore.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tdcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Vort\td\Bot\BotMovieVort\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">tdcore.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">tdcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Vort\td\Bot\BotMovieVort\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">tdcore.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">tdcore</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /utf-8 /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4324;4505;4814;4702</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /utf-8 /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4100;4127;4324;4505;4814;4702</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /utf-8 /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4100;4127;4324;4505;4814;4702</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /utf-8 /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;4127;4324;4505;4814;4702</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;NTDDI_VERSION=0x06020000;WINVER=0x0602;_WIN32_WINNT=0x0602;PSAPI_VERSION=1;NOMINMAX;UNICODE;_UNICODE;WIN32_LEAN_AND_MEAN;_FILE_OFFSET_BITS=64;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Vort\td;C:\Vort\td\td\generate\auto;C:\Vort\td\tdactor;C:\Vort\td\tdutils;C:\Vort\td\Bot\BotMovieVort\build\tdutils;C:\Vort\td\tdnet;C:\Vort\td\tddb;C:\Vort\ProgramData\vcpkg\installed\x86-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Vort\td\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x86-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Vort\td\td\mtproto\AuthData.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\ConnectionManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\DhHandshake.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\Handshake.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\HandshakeActor.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\HttpTransport.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\IStreamTransport.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\KDF.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\Ping.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\PingConnection.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\ProxySecret.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\RawConnection.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\RSA.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\SessionConnection.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\TcpTransport.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\TlsInit.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\TlsReaderByteFlow.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\Transport.cpp" />
+    <ClCompile Include="C:\Vort\td\td\mtproto\utils.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Account.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\AnimationsManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\AudiosManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\AuthManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\AutoDownloadSettings.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\BackgroundManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\BackgroundType.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\BotCommand.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\BotCommandScope.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\CallActor.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\CallDiscardReason.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\CallManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\CallbackQueriesManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ChannelParticipantFilter.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ClientActor.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ConfigManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ConfigShared.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ConnectionState.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Contact.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ContactsManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\CountryInfoManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DelayDispatcher.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Dependencies.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DeviceTokenManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DhCache.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogAction.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogActionBar.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogAdministrator.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogDb.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogEventLog.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogFilter.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogId.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogInviteLink.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogLocation.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogParticipant.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogParticipantFilter.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DialogSource.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Document.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DocumentsManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DownloadManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DownloadManagerCallback.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\DraftMessage.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\FileReferenceManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileBitmask.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileDb.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileDownloader.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileEncryptionKey.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileFromBytes.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileGcParameters.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileGcWorker.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileGenerateManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileHashUploader.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileLoader.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileLoaderUtils.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileLoadManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileStats.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileStatsWorker.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileType.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\FileUploader.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\PartsManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\files\ResourceManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Game.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\GameManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Global.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\GroupCallManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\GroupCallParticipant.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\GroupCallParticipantOrder.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\GroupCallVideoPayload.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\HashtagHints.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\InlineQueriesManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\InputDialogId.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\InputGroupCallId.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\InputMessageText.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\JsonValue.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\LanguagePackManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\LinkManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Location.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\logevent\LogEventHelper.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Logging.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageContent.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageContentType.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageEntity.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageId.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageReaction.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageReplyInfo.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessagesDb.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageSearchFilter.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageSender.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessagesManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\MessageTtl.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\misc.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\AuthDataShared.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\ConnectionCreator.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\DcAuthManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\DcOptionsSet.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\MtprotoHeader.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetActor.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetQuery.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetQueryCreator.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetQueryDelayer.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetQueryDispatcher.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetQueryStats.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\NetStatsManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\Proxy.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\PublicRsaKeyShared.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\PublicRsaKeyWatchdog.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\Session.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\SessionProxy.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\net\SessionMultiProxy.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\NewPasswordState.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\NotificationManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\NotificationSettings.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\NotificationType.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\OptionManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Payments.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\PasswordManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\PhoneNumberManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\PrivacyManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Photo.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\PhotoSizeSource.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\PollManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\QueryCombiner.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\RecentDialogList.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ReplyMarkup.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ReportReason.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\RestrictionReason.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SecretChatActor.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SecretChatDb.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SecretChatsManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SecureManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SecureStorage.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SecureValue.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SendCodeHelper.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SequenceDispatcher.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SpecialStickerSetType.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SponsoredMessageManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\StateManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\StickerFormat.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\StickersManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\StorageManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\SuggestedAction.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Td.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\TdDb.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\TermsOfService.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\ThemeManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\TopDialogCategory.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\TopDialogManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\UpdatesManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\Venue.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\VideoNotesManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\VideosManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\VoiceNotesManager.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\WebPageBlock.cpp" />
+    <ClCompile Include="C:\Vort\td\td\telegram\WebPagesManager.cpp" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\AuthData.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\AuthKey.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\ConnectionManager.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\CryptoStorer.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\DhCallback.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\DhHandshake.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\Handshake.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\HandshakeActor.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\HandshakeConnection.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\HttpTransport.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\IStreamTransport.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\KDF.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\MtprotoQuery.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\NoCryptoStorer.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\PacketInfo.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\PacketStorer.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\Ping.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\PingConnection.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\ProxySecret.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\RawConnection.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\RSA.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\SessionConnection.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\TcpTransport.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\TlsInit.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\TlsReaderByteFlow.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\Transport.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\TransportType.h" />
+    <ClInclude Include="C:\Vort\td\td\mtproto\utils.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AccessRights.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Account.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AffectedHistory.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AnimationsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AudiosManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AuthManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AutoDownloadSettings.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\BackgroundId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\BackgroundManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\BackgroundType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\BotCommand.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\BotCommandScope.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\CallActor.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\CallDiscardReason.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\CallId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\CallManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\CallbackQueriesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ChainId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ChannelId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ChannelParticipantFilter.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ChatId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ClientActor.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ConfigManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ConfigShared.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ConnectionState.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Contact.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ContactsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\CountryInfoManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DelayDispatcher.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Dependencies.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DeviceTokenManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DhCache.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DhConfig.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogAction.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogActionBar.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogAdministrator.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogDate.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogDb.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogEventLog.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogFilter.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogFilterId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogInviteLink.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogListId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogLocation.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogParticipant.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogParticipantFilter.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogSource.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Document.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DocumentsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DownloadManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DownloadManagerCallback.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DraftMessage.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\EncryptedFile.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\FileReferenceManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileBitmask.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileData.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileDb.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileDbId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileDownloader.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileEncryptionKey.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileFromBytes.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileGcParameters.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileGcWorker.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileGenerateManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileHashUploader.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileLoaderActor.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileLoader.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileLoaderUtils.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileLoadManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileLocation.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileSourceId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileStats.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileStatsWorker.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileUploader.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\PartsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\ResourceManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\ResourceState.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\FolderId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\FullMessageId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Game.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\GameManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Global.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\GroupCallId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\GroupCallManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\GroupCallParticipant.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\GroupCallParticipantOrder.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\GroupCallVideoPayload.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\HashtagHints.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\InlineQueriesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\InputDialogId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\InputGroupCallId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\InputMessageText.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\JsonValue.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\LanguagePackManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\LinkManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Location.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\logevent\LogEvent.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\logevent\LogEventHelper.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\logevent\SecretChatEvent.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Logging.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageContent.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageContentType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageCopyOptions.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageEntity.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageLinkInfo.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageReaction.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageReplyInfo.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageThreadInfo.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessagesDb.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageSearchFilter.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageSender.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessagesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageTtl.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MinChannel.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\misc.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\AuthDataShared.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\ConnectionCreator.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\DcAuthManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\DcId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\DcOptions.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\DcOptionsSet.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\MtprotoHeader.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetActor.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetQuery.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetQueryCounter.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetQueryCreator.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetQueryDelayer.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetQueryDispatcher.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetQueryStats.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetStatsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\NetType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\Proxy.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\PublicRsaKeyShared.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\PublicRsaKeyWatchdog.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\Session.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\SessionProxy.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\SessionMultiProxy.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\net\TempAuthKeyWatchdog.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NewPasswordState.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Notification.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationGroupId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationGroupKey.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationGroupType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationSettings.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\OptionManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PasswordManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Payments.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PhoneNumberManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Photo.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PhotoSizeSource.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PollId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PollManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PrivacyManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PtsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PublicDialogType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\QueryCombiner.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\RecentDialogList.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ReplyMarkup.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ReportReason.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\RequestActor.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\RestrictionReason.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ScheduledServerMessageId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecretChatActor.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecretChatId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecretChatDb.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecretChatLayer.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecretChatsManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecretInputMedia.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecureManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecureStorage.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecureValue.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SendCodeHelper.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SequenceDispatcher.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ServerMessageId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SetWithPosition.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SpecialStickerSetType.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SponsoredMessageManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StateManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StickerFormat.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StickerSetId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StickersManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StorageManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SuggestedAction.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Td.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\TdCallback.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\TdDb.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\TdParameters.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\TermsOfService.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ThemeManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\TopDialogCategory.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\TopDialogManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\UniqueId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\UpdatesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\UserId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Venue.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Version.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\VideoNotesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\VideosManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\VoiceNotesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\WebPageBlock.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\WebPageId.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\WebPagesManager.h" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AnimationsManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AudiosManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\AuthManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\BackgroundType.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DialogFilter.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Document.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DocumentsManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\DraftMessage.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\FileReferenceManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileData.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileId.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileLocation.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\files\FileSourceId.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Game.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\InputMessageText.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageEntity.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageReaction.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MessageReplyInfo.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\MinChannel.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\NotificationSettings.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Payments.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\Photo.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PhotoSizeSource.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PollId.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\PollManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\ReplyMarkup.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SecureValue.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\SendCodeHelper.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StickerSetId.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\StickersManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\VideoNotesManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\VideosManager.hpp" />
+    <ClInclude Include="C:\Vort\td\td\telegram\VoiceNotesManager.hpp" />
+    <ClCompile Include="C:\Vort\td\td\generate\auto\td\mtproto\mtproto_api.cpp" />
+    <ClInclude Include="C:\Vort\td\td\generate\auto\td\mtproto\mtproto_api.h" />
+    <ClInclude Include="C:\Vort\td\td\generate\auto\td\mtproto\mtproto_api.hpp" />
+    <ClCompile Include="C:\Vort\td\td\generate\auto\td\telegram\telegram_api.cpp" />
+    <ClInclude Include="C:\Vort\td\td\generate\auto\td\telegram\telegram_api.h" />
+    <ClInclude Include="C:\Vort\td\td\generate\auto\td\telegram\telegram_api.hpp" />
+    <ClCompile Include="C:\Vort\td\td\generate\auto\td\telegram\secret_api.cpp" />
+    <ClInclude Include="C:\Vort\td\td\generate\auto\td\telegram\secret_api.h" />
+    <ClInclude Include="C:\Vort\td\td\generate\auto\td\telegram\secret_api.hpp" />
+    <ClInclude Include="C:\Vort\td\td\tl\TlObject.h" />
+    <ClInclude Include="C:\Vort\td\td\tl\tl_object_parse.h" />
+    <ClInclude Include="C:\Vort\td\td\tl\tl_object_store.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\ZERO_CHECK.vcxproj">
+      <Project>{4A953B46-E4C7-39B4-A2D7-BC8D07D4DAF1}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\remove_cpp_documentation.vcxproj">
+      <Project>{CD8448C9-5A95-3A57-AD14-D92399F7C904}</Project>
+      <Name>remove_cpp_documentation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\tdactor\tdactor.vcxproj">
+      <Project>{0B710B22-4896-3529-842C-40F4715EA1EA}</Project>
+      <Name>tdactor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\tdapi.vcxproj">
+      <Project>{6D340C2C-5750-30A4-968C-888B9066760F}</Project>
+      <Name>tdapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\tddb\tddb.vcxproj">
+      <Project>{FCA8F3DB-B6A4-39C0-9A61-EB8A23DEA3FC}</Project>
+      <Name>tddb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\tdnet\tdnet.vcxproj">
+      <Project>{69D512AA-FED0-325B-B127-25BA52F0008B}</Project>
+      <Name>tdnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\sqlite\tdsqlite.vcxproj">
+      <Project>{8AF35979-4991-331B-91B9-30DF59E10C91}</Project>
+      <Name>tdsqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\tdutils\tdutils.vcxproj">
+      <Project>{CB5D4318-1278-3B35-AEBA-1C19083F8F6C}</Project>
+      <Name>tdutils</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build\td\generate\tl_generate_common.vcxproj">
+      <Project>{1B522F04-84A3-3BA8-8251-90DA0F6BAA50}</Project>
+      <Name>tl_generate_common</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

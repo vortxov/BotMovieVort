@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\428ed29f2a8984488a3c38f832f9bbc7\mime_type_to_extension.gperf.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\428ed29f2a8984488a3c38f832f9bbc7\extension_to_mime_type.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\428ed29f2a8984488a3c38f832f9bbc7\mime_type_to_extension.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build\CMakeFiles\7c4bf2bcf40572e9100253051de6f26f\tdmime_auto.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Vort\td\tdutils\generate\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Vort\td\Bot\BotMovieVort\build\tdutils\generate\CMakeFiles\tdmime_auto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B280E9ED-8CE0-3F57-8997-9BC195960E0E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

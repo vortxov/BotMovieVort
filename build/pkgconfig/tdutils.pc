@@ -1,0 +1,9 @@
+prefix=C:/Program Files (x86)/TDLib
+
+Name: tdutils
+Description: Telegram Library - Utils
+Version: 1.8.2
+
+CFlags: -I"${prefix}/include"
+Libs: -L"${prefix}/lib" -ltdutils
+Libs.private: -l"C:/Vort/ProgramData/vcpkg/installed/x86-windows/lib/libcrypto" -lCrypt32 -l"C:/Vort/ProgramData/vcpkg/installed/x86-windows/lib/zlib" -lws2_32 -lMswsock -lNormaliz -lpsapi -lshell32

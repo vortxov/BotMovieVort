@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\0987ce24cfd4a09ac3d5d3bb441b0440\tl_generate_json.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Vort\td\td\generate\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\CMakeFiles\tl_generate_json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3291E93A-C29D-3EB6-987E-7575069C0B0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

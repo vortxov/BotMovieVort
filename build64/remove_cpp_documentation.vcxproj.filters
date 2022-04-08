@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\0c820ef615a8654372d3b31726ab4b75\remove_cpp_documentation.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Vort\td\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\remove_cpp_documentation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3291E93A-C29D-3EB6-987E-7575069C0B0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

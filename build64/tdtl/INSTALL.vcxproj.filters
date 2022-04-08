@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\4bd7c019a03297dc895da3b1279b71fb\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3291E93A-C29D-3EB6-987E-7575069C0B0B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

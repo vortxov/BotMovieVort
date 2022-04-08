@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3C0D4E8B-B514-30B3-9AEB-9F7FBAA92DF2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Vort\td\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build64 --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build64 --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build64 --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Vort/td/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Vort\cmake-3.23.0-windows-x86_64\bin\cmake.exe -SC:/Vort/td -BC:/Vort/td/Bot/BotMovieVort/build64 --check-stamp-file C:/Vort/td/Bot/BotMovieVort/build64/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\openssl\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\installed\x64-windows\share\zlib\vcpkg-cmake-wrapper.cmake;C:\Vort\ProgramData\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\BasicConfigVersion-ExactVersion.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCXXInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCommonLanguageInclude.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeCompilerIdDetection.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDependentOption.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompileFeatures.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerABI.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineCompilerId.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeDetermineSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeFindBinUtils.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeGenericSystem.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeInitializeConfigs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeLanguageInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakePackageConfigHelpers.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeParseLibraryArchitecture.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCCompiler.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeRCInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystem.cmake.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInformation.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeSystemSpecificInitialize.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCXXCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestCompilerCommon.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CMakeTestRCCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.c.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckIncludeFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CheckLibraryExists.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\CompilerId\VS-10.vcxproj.in;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindOpenSSL.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageHandleStandardArgs.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindPackageMessage.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindThreads.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\FindZLIB.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\GenerateExportHeader.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Internal\FeatureTesting.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-Determine-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-C.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows-MSVC.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\Windows.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\Platform\WindowsPaths.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\SelectLibraryConfigurations.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\WriteBasicConfigVersionFile.cmake;C:\Vort\cmake-3.23.0-windows-x86_64\share\cmake-3.23\Modules\exportheader.cmake.in;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeCXXCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeRCCompiler.cmake;C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\3.23.0\CMakeSystem.cmake;C:\Vort\td\CMake\AddCXXCompilerFlag.cmake;C:\Vort\td\CMake\FindReadline.cmake;C:\Vort\td\CMake\GeneratePkgConfig.cmake;C:\Vort\td\CMake\PreventInSourceBuild.cmake;C:\Vort\td\CMake\TdSetUpCompiler.cmake;C:\Vort\td\CMake\illumos.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Vort\td\Bot\BotMovieVort\build64\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\ZERO_CHECK.vcxproj">
+      <Project>{C8B7233E-28C8-357C-9511-D623A6F44566}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_actor.vcxproj">
+      <Project>{32C6D907-A629-3531-9FDE-E1B2712E3254}</Project>
+      <Name>bench_actor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_crypto.vcxproj">
+      <Project>{2B48AEFB-F901-3083-9A97-C948568AFC54}</Project>
+      <Name>bench_crypto</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_db.vcxproj">
+      <Project>{8A0D2B1B-E1D1-3EE8-B7B1-330849CF9FEF}</Project>
+      <Name>bench_db</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_empty.vcxproj">
+      <Project>{F1D69452-1F48-3826-95D7-E53DB26262BF}</Project>
+      <Name>bench_empty</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_handshake.vcxproj">
+      <Project>{2A14D026-FFFE-3DFA-884B-D9C754D5E71F}</Project>
+      <Name>bench_handshake</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_http.vcxproj">
+      <Project>{6C5DAD8F-BB10-314E-B8D7-8C28BAE1BC6A}</Project>
+      <Name>bench_http</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_http_reader.vcxproj">
+      <Project>{1E644313-5E92-324E-A6C1-3CB5A5D117DD}</Project>
+      <Name>bench_http_reader</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_http_server.vcxproj">
+      <Project>{3A102BB0-95A3-3590-91F2-064C5434214D}</Project>
+      <Name>bench_http_server</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_http_server_cheat.vcxproj">
+      <Project>{746D8154-9689-30B5-8423-92CB92B02EC2}</Project>
+      <Name>bench_http_server_cheat</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_http_server_fast.vcxproj">
+      <Project>{30C5439A-CDD4-315B-858C-453E4720EA34}</Project>
+      <Name>bench_http_server_fast</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_misc.vcxproj">
+      <Project>{C2757F81-E3B7-3650-AD9F-A3CA88C6E5DA}</Project>
+      <Name>bench_misc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\bench_tddb.vcxproj">
+      <Project>{45808E2F-8A4D-310D-A409-828A2E60E777}</Project>
+      <Name>bench_tddb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tddb\binlog_dump.vcxproj">
+      <Project>{1C59E7EA-8312-372F-90BA-44908E42630D}</Project>
+      <Name>binlog_dump</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\check_proxy.vcxproj">
+      <Project>{310B7E8E-C9C7-338F-8905-3DEECEE63966}</Project>
+      <Name>check_proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\check_tls.vcxproj">
+      <Project>{CFBB4453-73B1-3F55-915B-A6ECF1C54121}</Project>
+      <Name>check_tls</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdactor\example.vcxproj">
+      <Project>{631F1513-3F9A-3F19-92EC-3E398837D784}</Project>
+      <Name>example</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\generate_c.vcxproj">
+      <Project>{4FAFBB5B-B80F-34B4-B3B1-3A35CB7AB7E4}</Project>
+      <Name>generate_c</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\generate_common.vcxproj">
+      <Project>{C8E7EB87-A2F8-3E0B-B73A-BB85A5505A06}</Project>
+      <Name>generate_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\generate_json.vcxproj">
+      <Project>{31934B1F-8A00-3FC5-BF42-894B7A590D2C}</Project>
+      <Name>generate_json</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdutils\generate\generate_mime_types_gperf.vcxproj">
+      <Project>{E7890C17-0E07-3D5C-9114-ABA5A8486630}</Project>
+      <Name>generate_mime_types_gperf</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\git_commit.vcxproj">
+      <Project>{ECA31F52-7BD4-3097-84C3-2E40411DDF55}</Project>
+      <Name>git_commit</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\memprof.vcxproj">
+      <Project>{9B7EC5AF-D523-3EF5-B14F-AE5A99CA2B95}</Project>
+      <Name>memprof</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\remove_documentation.vcxproj">
+      <Project>{BEFFC878-CBBC-3B30-9783-0A47C0D9D5DD}</Project>
+      <Name>remove_documentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\rmdir.vcxproj">
+      <Project>{1BB35775-A32B-3283-A793-45E478C7397F}</Project>
+      <Name>rmdir</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\test\run_all_tests.vcxproj">
+      <Project>{70188C05-E30B-3C2C-A655-F0EE85712D71}</Project>
+      <Name>run_all_tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\td_generate_dotnet_api.vcxproj">
+      <Project>{C02300D5-4AFD-3D2C-A351-CF31128F8ED9}</Project>
+      <Name>td_generate_dotnet_api</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\td_generate_java_api.vcxproj">
+      <Project>{E5B39E75-3E4C-3DBD-AC32-5834B78DC986}</Project>
+      <Name>td_generate_java_api</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdactor\tdactor.vcxproj">
+      <Project>{B76C052E-9399-327E-B557-921C1729A4D1}</Project>
+      <Name>tdactor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdapi.vcxproj">
+      <Project>{01E82E41-2FBF-3253-99C4-B07E9F4339A0}</Project>
+      <Name>tdapi</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdclient.vcxproj">
+      <Project>{124D3A5B-FEC1-3EE4-9680-FA1CCCA47925}</Project>
+      <Name>tdclient</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdcore.vcxproj">
+      <Project>{AA5CDB0E-2433-3BA7-85C6-0EE3E223742D}</Project>
+      <Name>tdcore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tddb\tddb.vcxproj">
+      <Project>{20A096DB-395D-310D-81F6-BF4DC0E14022}</Project>
+      <Name>tddb</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tddotnet.vcxproj">
+      <Project>{3B028A45-A4AA-3FC9-AFF3-0ED8BEE57440}</Project>
+      <Name>tddotnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdjson.vcxproj">
+      <Project>{0334EBF5-1A83-3CD7-BECF-459641C04150}</Project>
+      <Name>tdjson</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdjson_private.vcxproj">
+      <Project>{FD05188D-8DE9-367B-AB21-190BE0A471B5}</Project>
+      <Name>tdjson_private</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdjson_static.vcxproj">
+      <Project>{98444876-FA7F-3899-9D8B-55FF89BAD366}</Project>
+      <Name>tdjson_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdnet\tdnet.vcxproj">
+      <Project>{EEDEA1F4-946C-3FF7-9B43-412182E7F30A}</Project>
+      <Name>tdnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\sqlite\tdsqlite.vcxproj">
+      <Project>{82AACE2B-63CB-3CE4-9A11-67EEFC9CA0D0}</Project>
+      <Name>tdsqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdtl\tdtl.vcxproj">
+      <Project>{49F4D17E-88EF-3ED1-AEC8-7F6E58E498F7}</Project>
+      <Name>tdtl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tdutils\tdutils.vcxproj">
+      <Project>{88F85FE1-73A9-3E47-9C3F-0A3B1C5D5CFD}</Project>
+      <Name>tdutils</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\tg_cli.vcxproj">
+      <Project>{D132EFB8-3AB8-3EBA-8774-CDC5B641D319}</Project>
+      <Name>tg_cli</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\td\generate\tl-parser\tl-parser.vcxproj">
+      <Project>{D65BEF91-265D-394D-80C7-119B520548D5}</Project>
+      <Name>tl-parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Vort\td\Bot\BotMovieVort\build64\benchmark\wget.vcxproj">
+      <Project>{602AE427-9086-30CB-B4D0-B9677AD68645}</Project>
+      <Name>wget</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
