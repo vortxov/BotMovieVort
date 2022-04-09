@@ -1,5 +1,6 @@
 ﻿using BotMovieVort.Domain.Entity;
 using BotMovieVort.Domain.Repository.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,12 +24,12 @@ namespace BotMovieVort.Domain.Repository.EntityFramework
 
         public async Task<Season> GetSeasonById(Guid id)
         {
-            return appDbContext.Seasons.FirstOrDefault(x => x.Id == id);
+            return appDbContext.Seasons.Include(x => x.Series).Include(x => x.Serials).FirstOrDefault(x => x.Id == id);
         }
 
         public async Task<IQueryable<Season>> GetSeasons()
         {
-            return appDbContext.Seasons;
+            return appDbContext.Seasons.Include(x => x.Series).Include(x => x.Serials);
         }
 
         public async Task SaveSeason(Season entity)

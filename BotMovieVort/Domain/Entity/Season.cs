@@ -11,5 +11,6 @@ namespace BotMovieVort.Domain.Entity
         public Guid Id { get; set; }
         public int Number { get; set; }
         public List<Series> Series { get; set; } = new List<Series>();
+        public ItemSerials Serials { get; set; }
     }
 }

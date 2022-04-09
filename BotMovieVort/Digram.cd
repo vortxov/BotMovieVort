@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BotMovieVort.Domain.Entity.Genre">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Domain\Entity\Genre.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ItemFilms" />
+      <Property Name="ItemSerials" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BotMovieVort.Domain.Entity.ItemFilm">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAABAAgAAIACAIAAAQAAAAAAAABAAAAAAICAAA=</HashCode>
+      <FileName>Domain\Entity\ItemFilm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Genres" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BotMovieVort.Domain.Entity.ItemSerials">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAIEBAAgAAAACAIAAAQAAAAAAAABAAAAAAACAAA=</HashCode>
+      <FileName>Domain\Entity\ItemSerials.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Seasons" />
+      <Property Name="Genres" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BotMovieVort.Domain.Entity.Season">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Domain\Entity\Season.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Serials" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Series" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BotMovieVort.Domain.Entity.Series">
+    <Position X="6.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAQAAIAAAAAAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Domain\Entity\Series.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Season" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

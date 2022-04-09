@@ -13,6 +13,7 @@ namespace BotMovieVort.Service
         {
             try
             {
+                int time = 0;
                 var listPath = new List<string>();
                 using (var file = System.IO.File.OpenRead(path))
                 {
@@ -20,6 +21,7 @@ namespace BotMovieVort.Service
                     var response = client.PostTorrent(file, "tools");
                     var torrent = response.AddedTorrent;
                     var filesTorrent = client.GetTorrent(torrent.Hash);
+
 
                     foreach (var fileTorrent in filesTorrent.Result.Files.Values)
                     {
@@ -49,13 +51,23 @@ namespace BotMovieVort.Service
                             }
                         }
 
+                        if(time == 100)
+                        {
+                            client.Remove(torrent.Hash);
+                            return null;
+                        }
+
+
                         if (progress)
                         {
                             client.Remove(torrent.Hash);
                             break;
                         }
                         else
+                        {
                             Thread.Sleep(10000);
+                            time++;
+                        }
                     }
                 }
                 return listPath;

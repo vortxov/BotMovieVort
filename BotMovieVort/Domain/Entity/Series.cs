@@ -13,5 +13,6 @@ namespace BotMovieVort.Domain.Entity
         public string Path { get; set; }
         public int NumberSeries { get; set; }
         public string? FileId { get; set; }
+        public Season Season { get; set; }
     }
 }
