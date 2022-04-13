@@ -66,6 +66,47 @@ public class Handlers
             {
                 var film = dataManager.itemFilm.GetItemFilmById(Guid.Parse(data[1])).Result;
 
+                string text = film.Name + " (" + film.Year + ")" + "\n" + "\n" +
+                    film.Description + "\n" + "\n" +
+                    "Кинопоиск:" + film.RatingKP + "\n" +
+                    "IMDB:" + film.RatingIMDB + "\n" + "\n" +
+                    "Выберите действие из списка ниже:";
+
+                List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
+                if (data.Count() > 2)
+                {
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "mt/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад к списку фильмов", data[2] + "/" + data[3]) });
+                }
+                else
+                {
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "mt/" + data[1]) });
+                }
+
+
+
+                InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);
+
+                return await botClient.EditMessageTextAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
+                        text: text,
+                        replyMarkup: inlineKeyboard);
+
+                return await botClient.SendVideoAsync(
+                       chatId: callbackQuery.Message.Chat.Id,
+                       video: new InputOnlineFile(film.FileId),
+                       caption: film.Name,
+                       parseMode: ParseMode.Html,
+                       supportsStreaming: true);
+            }
+            if (data[0] == "mt")
+            {
+                var film = dataManager.itemFilm.GetItemFilmById(Guid.Parse(data[1])).Result;
+
+                string text = film.Name + " (" + film.Year + ")";
+
+
                 return await botClient.SendVideoAsync(
                        chatId: callbackQuery.Message.Chat.Id,
                        video: new InputOnlineFile(film.FileId),
@@ -334,6 +375,25 @@ public class Handlers
                         chatId: callbackQuery.Message.Chat.Id,
                         messageId: callbackQuery.Message.MessageId,
                         text: "Ниже представлены сериалы по рекомендациям",
+                        replyMarkup: SearchItems("", int.Parse(data[1]), data[0]));
+            }
+            else if (data[0] == "af")
+            {
+                var inlineKeyboard = SearchItems("", int.Parse(data[1]), data[0]);
+
+                return await botClient.EditMessageTextAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
+                        text: "Ниже представлен список всех фильмов",
+                        replyMarkup: inlineKeyboard);
+            }
+
+            else if (data[0] == "rf")
+            {
+                return await botClient.EditMessageTextAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
+                        text: "Ниже представлены фильмы по рекомендациям",
                         replyMarkup: SearchItems("", int.Parse(data[1]), data[0]));
             }
 
@@ -623,7 +683,7 @@ public class Handlers
 
             foreach (var film in films)
             {
-                items.Add(new Items() { Text = film.Name + " (" + film.Year + ")", Data = "m/" + film.Id });
+                items.Add(new Items() { Text = film.Name + " (" + film.Year + ")", Data = "m/" + film.Id + "/" + type + "/" + page });
             }
 
             return ViewItems(items, message, type, page);
@@ -694,7 +754,7 @@ public class Handlers
 
             foreach (var film in films)
             {
-                items.Add(new Items() { Text = film.Name + " (" + film.Year + ")", Data = "m/" + film.Id });
+                items.Add(new Items() { Text = film.Name + " (" + film.Year + ")", Data = "m/" + film.Id + "/" + type + "/" + page });
             }
 
             return ViewItems(items, message, type, page);
