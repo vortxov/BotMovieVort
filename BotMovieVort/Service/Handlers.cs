@@ -82,38 +82,63 @@ public class Handlers
 
                 List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
 
-
-                if (series.NumberSeries == 1)
+                if (data.Count() > 2)
                 {
-                    buttons.Add(new[] {InlineKeyboardButton.WithCallbackData("К сезонам", "ssa/" +
+                    if (series.NumberSeries == 1)
+                    {
+                        buttons.Add(new[] {InlineKeyboardButton.WithCallbackData("К сезонам", "ssa/" +
                                              series.Season.Serials.Id
                                             + "/" + data[2] + "/" + data[3]),
                                         InlineKeyboardButton.WithCallbackData("След", "st/" +
-                                               series.Season.Series.FirstOrDefault(x => x.NumberSeries == series.NumberSeries + 1).Id.ToString()
+                                               series.Season.Series[series.NumberSeries].Id.ToString()
                                                + "/" + data[2] + "/" + data[3]),});
-                }
-                else if(series.NumberSeries == series.Season.Series.Count)
-                {
-                    buttons.Add(new[] {InlineKeyboardButton.WithCallbackData("Пред", "st/" +
-                                             series.Season.Series.FirstOrDefault(x => x.NumberSeries == series.NumberSeries - 1).Id.ToString()
+                    }
+                    else if (series.NumberSeries == series.Season.Series.Count)
+                    {
+                        buttons.Add(new[] {InlineKeyboardButton.WithCallbackData("Пред", "st/" +
+                                             series.Season.Series[series.NumberSeries - 2].Id.ToString()
                                              + "/" + data[2] + "/" + data[3]),
                                         InlineKeyboardButton.WithCallbackData("К сезонам", "ssa/" +
                                              series.Season.Serials.Id
                                             + "/" + data[2] + "/" + data[3]),});
+                    }
+                    else
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Пред", "st/" +
+                                                 series.Season.Series[series.NumberSeries - 2].Id.ToString()
+                                                 + "/" + data[2] + "/" + data[3]),
+                                        InlineKeyboardButton.WithCallbackData("След", "st/" +
+                                                 series.Season.Series[series.NumberSeries].Id.ToString()
+                                                 + "/" + data[2] + "/" + data[3])});
+                    }
                 }
                 else
                 {
-                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Пред", "st/" +
-                                                 series.Season.Series.FirstOrDefault(x => x.NumberSeries == series.NumberSeries - 1).Id.ToString()
-                                                 + "/" + data[2] + "/" + data[3]),
+                    if (series.NumberSeries == 1)
+                    {
+                        buttons.Add(new[] {InlineKeyboardButton.WithCallbackData("К сезонам", "ssa/" +
+                                             series.Season.Serials.Id),
                                         InlineKeyboardButton.WithCallbackData("След", "st/" +
-                                                 series.Season.Series.FirstOrDefault(x => x.NumberSeries == series.NumberSeries + 1).Id.ToString()
-                                                 + "/" + data[2] + "/" + data[3])});
+                                               series.Season.Series[series.NumberSeries].Id.ToString()),});
+                    }
+                    else if (series.NumberSeries == series.Season.Series.Count)
+                    {
+                        buttons.Add(new[] {InlineKeyboardButton.WithCallbackData("Пред", "st/" +
+                                             series.Season.Series[series.NumberSeries - 2].Id.ToString()),
+                                        InlineKeyboardButton.WithCallbackData("К сезонам", "ssa/" +
+                                             series.Season.Serials.Id),});
+                    }
+                    else
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Пред", "st/" +
+                                                 series.Season.Series[series.NumberSeries - 2].Id.ToString()),
+                                        InlineKeyboardButton.WithCallbackData("След", "st/" +
+                                                 series.Season.Series[series.NumberSeries].Id.ToString())});
+                    }
                 }
 
 
                 InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);
-
 
                 return await botClient.SendVideoAsync(
                        chatId: callbackQuery.Message.Chat.Id,
@@ -132,12 +157,24 @@ public class Handlers
                 List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
 
 
-                for (int i = 0; i < serial.Seasons.Count; i++)
+                if (data.Count() > 2)
                 {
-                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1).ToString(), "ssr/" + serial.Seasons[i].Id.ToString() + "/" + data[2] + "/" + data[3]) });
-                }
+                    for (int i = 0; i < serial.Seasons.Count; i++)
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1).ToString(), "ssr/" + serial.Seasons[i].Id.ToString() + "/" + data[2] + "/" + data[3]) });
+                    }
 
-                buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "s/" + serial.Id + "/" + data[2] + "/" + data[3]) });
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "s/" + serial.Id + "/" + data[2] + "/" + data[3]) });
+                }
+                else
+                {
+                    for (int i = 0; i < serial.Seasons.Count; i++)
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1).ToString(), "ssr/" + serial.Seasons[i].Id.ToString()) });
+                    }
+
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "s/" + serial.Id) });
+                }
 
 
 
@@ -149,6 +186,16 @@ public class Handlers
                         text: text,
                         replyMarkup: inlineKeyboard);
             }
+            else if (data[0] == "move")
+            {
+                var inlineKeyboard = SearchItems(data[2], int.Parse(data[3]), data[1]);
+
+                return await botClient.EditMessageTextAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
+                        text: data[2],
+                        replyMarkup: inlineKeyboard);
+            }
             else if (data[0] == "ssa")
             {
                 var serial = dataManager.itemSerials.GetItemSerialsById(Guid.Parse(data[1])).Result;
@@ -158,13 +205,26 @@ public class Handlers
                 List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
 
 
-                for (int i = 0; i < serial.Seasons.Count; i++)
+                
+
+                if (data.Count() > 2)
                 {
-                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1).ToString(), "ssr/" + serial.Seasons[i].Id.ToString() + "/" + data[2] + "/" + data[3]) });
+                    for (int i = 0; i < serial.Seasons.Count; i++)
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1).ToString(), "ssr/" + serial.Seasons[i].Id.ToString() + "/" + data[2] + "/" + data[3]) });
+                    }
+
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "s/" + serial.Id + "/" + data[2] + "/" + data[3]) });
                 }
+                else
+                {
+                    for (int i = 0; i < serial.Seasons.Count; i++)
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1).ToString(), "ssr/" + serial.Seasons[i].Id.ToString()) });
+                    }
 
-                buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "s/" + serial.Id + "/" + data[2] + "/" + data[3]) });
-
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "s/" + serial.Id) });
+                }
 
 
                 InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);
@@ -184,20 +244,32 @@ public class Handlers
 
                 List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
 
-
-                for (int i = 0; i < season.Series.Count; i++)
+               
+                if (data.Count() > 2)
                 {
-                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1) + " серия", "st/" + season.Series[i].Id.ToString() + "/" + data[2] + "/" + data[3]) });
+                    for (int i = 0; i < season.Series.Count; i++)
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1) + " серия", "st/" + season.Series[i].Id.ToString() + "/" + data[2] + "/" + data[3]) });
+                    }
+
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "ss/" + season.Serials.Id + "/" + data[2] + "/" + data[3]) });
                 }
+                else
+                {
+                    for (int i = 0; i < season.Series.Count; i++)
+                    {
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData((i + 1) + " серия", "st/" + season.Series[i].Id.ToString()) });
+                    }
 
-                buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "ss/" + season.Serials.Id + "/" + data[2] + "/" + data[3]) });
-
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад", "ss/" + season.Serials.Id) });
+                }
 
 
                 InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);
 
-                return await botClient.SendTextMessageAsync(
+                return await botClient.EditMessageTextAsync(
                         chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
                         text: text,
                         replyMarkup: inlineKeyboard);
             }
@@ -211,9 +283,15 @@ public class Handlers
                     "Выберите действие из списка ниже:";
 
                 List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
-
-                buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1] +"/" + data[2] + "/" + data[3]) });
-                buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад к списку сериалов", data[2] + "/" + data[3]) });
+                if (data.Count() > 2)
+                {
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад к списку сериалов", data[2] + "/" + data[3]) });
+                }
+                else
+                {
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1]) });
+                }
 
 
 
@@ -242,6 +320,21 @@ public class Handlers
                         chatId: callbackQuery.Message.Chat.Id,
                         text: dataManager.genre.GetGenreById(Guid.Parse(data[1])).Result.Name + ":",
                         replyMarkup: SearchItems(data[1], int.Parse(data[2]), "Cgf"));
+            }
+            else if (data[0] == "Cgs")
+            {
+                return await botClient.SendTextMessageAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        text: dataManager.genre.GetGenreById(Guid.Parse(data[1])).Result.Name + ":",
+                        replyMarkup: SearchItems(data[1], int.Parse(data[2]), data[0]));
+            }
+            else if (data[0] == "rs")
+            {
+                return await botClient.EditMessageTextAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
+                        text: "Ниже представлены сериалы по рекомендациям",
+                        replyMarkup: SearchItems("", int.Parse(data[1]), data[0]));
             }
 
         }
@@ -285,8 +378,11 @@ public class Handlers
                 "Список всех фильмов" => SendAllFilm(botClient, message),
                 "Список всех сериалов" => SendAllSerial(botClient, message),
                 "Случайный фильм" => SendRandomFilm(botClient, message),
-                "По жанрам фильм" => SendGenresFilm(botClient, message),
-                "Рекомендуемый фильм" => SendRecomFilm(botClient, message),
+                "Случайный сериал" => SendRandomSerial(botClient, message),
+                "По жанрам фильмы" => SendGenresFilm(botClient, message),
+                "По жанрам сериалы" => SendGenresSerial(botClient, message),
+                "Рекомендуемые фильмы" => SendRecomFilm(botClient, message),
+                "Рекомендуемые сериалы" => SendRecomSerial(botClient, message),
                 _ => SendSearchItem(botClient, message)
             };
             Message sentMessage = await action;
@@ -347,8 +443,8 @@ public class Handlers
         ReplyKeyboardMarkup replyKeyboardMarkup = new(
                 new[]
                 {
-                        new KeyboardButton[] { "Список всех фильмов", "По жанрам фильм" },
-                        new KeyboardButton[] { "Рекомендуемый фильм", "Случайный фильм" },
+                        new KeyboardButton[] { "Список всех фильмов", "По жанрам фильмы" },
+                        new KeyboardButton[] { "Рекомендуемые фильмы", "Случайный фильм" },
                         new KeyboardButton[] { "Назад" }
                 })
         {
@@ -365,8 +461,8 @@ public class Handlers
         ReplyKeyboardMarkup replyKeyboardMarkup = new(
                 new[]
                 {
-                        new KeyboardButton[] { "Список всех сериалов", "По жанрам сериал" },
-                        new KeyboardButton[] { "Рекомендуемый сериал", "Случайный сериал" },
+                        new KeyboardButton[] { "Список всех сериалов", "По жанрам сериалы" },
+                        new KeyboardButton[] { "Рекомендуемые сериалы", "Случайный сериал" },
                         new KeyboardButton[] { "Назад" }
                 })
         {
@@ -393,10 +489,46 @@ public class Handlers
                parseMode: ParseMode.Html,
                supportsStreaming: true);
     }
+    private static async Task<Message> SendRandomSerial(ITelegramBotClient botClient, Message message)
+    {
+        var serials = dataManager.itemSerials.GetItemSerials().Result.ToList();
+
+        int index = new Random().Next(serials.Count());
+
+        var serial = serials[index];
+
+        string text = serial.Name + " (" + serial.Year + ")" + "\n" + "\n" +
+                    serial.Description + "\n" + "\n" +
+                    "Кинопоиск:" + serial.RatingKP + "\n" +
+                    "IMDB:" + serial.RatingIMDB + "\n" + "\n" +
+                    "Выберите действие из списка ниже:";
+
+        List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
+
+        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + serial.Id + "/as/0") });
+
+
+
+        InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);
+
+        return await botClient.SendTextMessageAsync(
+                chatId: message.Chat.Id,
+                text: text,
+                replyMarkup: inlineKeyboard);
+    }
 
     private static async Task<Message> SendGenresFilm(ITelegramBotClient botClient, Message message)
     {
         var inlineKeyboard = SearchItems(message.Text, 0, "gf");
+
+        return await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
+                                                    text: "Ниже представлен список жанров",
+                                                    replyMarkup: inlineKeyboard);
+    }
+
+    private static async Task<Message> SendGenresSerial(ITelegramBotClient botClient, Message message)
+    {
+        var inlineKeyboard = SearchItems(message.Text, 0, "gs");
 
         return await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
                                                     text: "Ниже представлен список жанров",
@@ -409,7 +541,16 @@ public class Handlers
         var inlineKeyboard = SearchItems(message.Text, 0, "rf");
 
         return await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
-                                                    text: "Ниже представлен по рекомендациям",
+                                                    text: "Ниже представлены фильмы по рекомендациям",
+                                                    replyMarkup: inlineKeyboard);
+    }
+
+    private static async Task<Message> SendRecomSerial(ITelegramBotClient botClient, Message message)
+    {
+        var inlineKeyboard = SearchItems(message.Text, 0, "rs");
+
+        return await botClient.SendTextMessageAsync(chatId: message.Chat.Id,
+                                                    text: "Ниже представлены сериалы по рекомендациям",
                                                     replyMarkup: inlineKeyboard);
     }
 
@@ -511,6 +652,28 @@ public class Handlers
 
             return ViewItems(items, message, type, page);
         }
+        else if (type == "gs")
+        {
+            var genres = dataManager.genre.GetGenres().Result;
+
+            foreach (var genre in genres)
+            {
+                items.Add(new Items() { Text = genre.Name, Data = "Cgs/" + genre.Id + "/0" });
+            }
+
+            return ViewItems(items, message, type, page);
+        }
+        else if (type == "Cgs")
+        {
+            var serials = dataManager.genre.GetGenreById(Guid.Parse(message)).Result.ItemSerials;
+
+            foreach (var serial in serials)
+            {
+                items.Add(new Items() { Text = serial.Name + " (" + serial.Year + ")", Data = "s/" + serial.Id });
+            }
+
+            return ViewItems(items, message, type, page);
+        }
         else if (type == "Cgf")
         {
             var films = dataManager.genre.GetGenreById(Guid.Parse(message)).Result.ItemFilms;
@@ -536,6 +699,20 @@ public class Handlers
 
             return ViewItems(items, message, type, page);
         }
+        else if (type == "rs") //TODO: проверка на большом количестве 
+        {
+            var serials = dataManager.itemSerials.GetItemSerials().Result.ToList();
+
+            serials.Sort((x, y) => ((double.Parse(y.RatingKP) * double.Parse(y.VotesKP) + double.Parse(y.RatingIMDB) * double.Parse(y.VotesIMDB)) / 2)
+                                .CompareTo((double.Parse(x.RatingKP) * double.Parse(x.VotesKP) + double.Parse(x.RatingIMDB) * double.Parse(x.VotesIMDB)) / 2));
+
+            foreach (var serial in serials)
+            {
+                items.Add(new Items() { Text = serial.Name + " (" + serial.Year + ")", Data = "s/" + serial.Id + "/" + type + "/" + page });
+            }
+
+            return ViewItems(items, message, type, page);
+        }
         return null;
     }
 
@@ -552,16 +729,16 @@ public class Handlers
 
         if (page == 0 && items.Count > 10)
         {
-            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("-->", type + "/" + message + "/" + (page + 1)) });
+            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("-->", "move/" + type + "/" + message + "/" + (page + 1)) });
         }
-        else if (items.Count - page * 10 > 10)
+        else if (items.Count - page * 10 < 10 && items.Count > 10)
         {
-            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("<--", type + "/" + message + "/" + (page - 1)) });
+            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("<--", "move/" + type + "/" + message + "/" + (page - 1)) });
         }
         else if (items.Count > 10 && page > 1)
         {
-            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("<--", type + "/" + message + "/" + (page - 1)),
-                                    InlineKeyboardButton.WithCallbackData("-->", type + "/" + message + "/" + (page + 1))});
+            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("<--", "move/" + type + "/" + message + "/" + (page - 1)),
+                                    InlineKeyboardButton.WithCallbackData("-->", "move/" + type + "/" + message + "/" + (page + 1))});
         }
 
         InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);

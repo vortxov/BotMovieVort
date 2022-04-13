@@ -103,6 +103,7 @@ namespace BotMovieVort.Service
                                 await dataManager.itemFilm.SaveItemFilm(film);
 
                                 TdApiServer.getFileId(film.Path, "m", film.Id);
+                                Thread.Sleep(10000);
                             }
                         }
                         catch (Exception ex)
@@ -134,7 +135,7 @@ namespace BotMovieVort.Service
                 try
                 {
                     driver.Navigate().GoToUrl(BaseAddress + SerialyAddress + p.ToString());
-                    //System.Threading.Thread.Sleep(1000);
+                    System.Threading.Thread.Sleep(1000);
 
                     var listEntry = driver.FindElements(By.Id("mp4"));
 
@@ -202,6 +203,13 @@ namespace BotMovieVort.Service
 
                                     if(season.Series.FirstOrDefault(x => x.NumberSeries == series.NumberSeries) == null)
                                     {
+
+                                        var st = season.Series.FirstOrDefault(x => x.NumberSeries == 0);
+                                        if (st != null)
+                                        {
+                                            season.Series.ForEach(x => x.NumberSeries++);
+                                        }
+
                                         season.Series.Add(series);
                                     }
                                 }
@@ -216,6 +224,7 @@ namespace BotMovieVort.Service
                                         if(item.FileId == null)
                                         {
                                             TdApiServer.getFileId(item.Path, "s", item.Id);
+                                            Thread.Sleep(10000);
                                         }
                                     }
                                 }
@@ -237,11 +246,21 @@ namespace BotMovieVort.Service
                                     season = serial.Seasons.FirstOrDefault(x => x.Number == season.Number);
 
                                     var series = new Series() { NumberSeries = int.Parse(infoSeries[1]), Path = path }; //TODO: Гдето найти имя серии и вставлять
+
+
+                                    var st = season.Series.FirstOrDefault(x => x.NumberSeries == 0);
+                                        if (st != null)
+                                    {
+                                        season.Series.ForEach(x => x.NumberSeries++);
+                                    }
+
                                     season.Series.Add(series);
                                 }
 
 
                                 serial = kinoPoiskApi.GetRatingSerial(serial);
+
+
                                 dataManager.itemSerials.SaveItemSerials(serial);
 
                                 foreach (var season in serial.Seasons)
@@ -251,6 +270,7 @@ namespace BotMovieVort.Service
                                         if (item.FileId == null)
                                         {
                                             TdApiServer.getFileId(item.Path, "s", item.Id);
+                                            Thread.Sleep(10000);
                                         }
                                     }
                                 }
