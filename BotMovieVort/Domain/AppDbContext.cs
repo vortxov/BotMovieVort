@@ -11,6 +11,7 @@ namespace BotMovieVort.Domain
         public DbSet<ItemSerials> ItemSerials { get; set; }
         public DbSet<Season> Seasons { get; set; }
         public DbSet<Series> Series { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {

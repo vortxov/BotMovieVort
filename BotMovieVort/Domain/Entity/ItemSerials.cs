@@ -19,5 +19,6 @@ namespace BotMovieVort.Domain.Entity
         public string? VotesKP { get; set; }
         public string? VotesIMDB { get; set; }
         public string? Status { get; set; }
+        public List<User> Users { get; set; } = new List<User>();
     }
 }

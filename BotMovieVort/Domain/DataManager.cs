@@ -11,6 +11,7 @@ namespace BotMovieVort.Domain
         public IItemSerialsRepository itemSerials { get; set; }
         public ISeasonRepository season { get; set; }
         public ISeriesRepository series { get; set; }
+        public IUserRepository user { get; set; }
         public DataManager()
         {
             appDbContext = new AppDbContext();
@@ -19,6 +20,7 @@ namespace BotMovieVort.Domain
             itemFilm = new ItemFilmRepository(appDbContext);
             series = new SeriesRepository(appDbContext);
             season = new SeasonRepository(appDbContext);
+            user = new UserRepository(appDbContext);
         }
     }
 }

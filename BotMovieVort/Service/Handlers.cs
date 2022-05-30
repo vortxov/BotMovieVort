@@ -1,4 +1,3 @@
-
 using BotMovieVort.Domain;
 using BotMovieVort.Model;
 using BotMovieVort.Service;
@@ -327,6 +326,7 @@ public class Handlers
                 if (data.Count() > 2)
                 {
                     buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "ss/" + data[1] + "/" + data[2] + "/" + data[3]) });
                     buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад к списку сериалов", data[2] + "/" + data[3]) });
                 }
                 else
