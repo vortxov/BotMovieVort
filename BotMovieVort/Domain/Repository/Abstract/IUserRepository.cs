@@ -14,5 +14,6 @@ namespace BotMovieVort.Domain.Repository.Abstract
         Task SaveUser(User entity);
         Task DeleteUser(Guid id);
         Task UpdateUser(User entity);
+        Task<User> GetUserByIdUser(long id);
     }
 }

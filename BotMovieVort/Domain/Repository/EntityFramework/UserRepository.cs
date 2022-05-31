@@ -27,6 +27,11 @@ namespace BotMovieVort.Domain.Repository.EntityFramework
             return appDbContext.Users.Include(x => x.ItemSerials).FirstOrDefault(x => x.Id == id);
         }
 
+        public async Task<User> GetUserByIdUser(long id)
+        {
+            return appDbContext.Users.Include(x => x.ItemSerials).FirstOrDefault(x => x.UserTelegramId == id);
+        }
+
         public async Task<IQueryable<User>> GetUsers()
         {
             return appDbContext.Users;

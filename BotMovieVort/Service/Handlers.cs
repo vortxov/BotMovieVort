@@ -326,7 +326,82 @@ public class Handlers
                 if (data.Count() > 2)
                 {
                     buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1] + "/" + data[2] + "/" + data[3]) });
-                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "ss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+
+                    var user = dataManager.user.GetUserByIdUser(callbackQuery.From.Id).Result;
+                    if(user == null)
+                    {
+                        user = new BotMovieVort.Domain.Entity.User();
+                        user.UserTelegramId = callbackQuery.From.Id;
+                        await dataManager.user.SaveUser(user);
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "yss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                    }
+                    else
+                    {
+                        var ser = user.ItemSerials.FirstOrDefault(x => x.Id == Guid.Parse(data[1]));
+                        if(ser == null)
+                        {
+                            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "yss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                        }
+                        else
+                        {
+                            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "yss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                        }
+                    }
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад к списку сериалов", data[2] + "/" + data[3]) });
+                }
+                else
+                {
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1]) });
+                }
+
+
+
+                InlineKeyboardMarkup inlineKeyboard = new InlineKeyboardMarkup(buttons);
+
+                return await botClient.EditMessageTextAsync(
+                        chatId: callbackQuery.Message.Chat.Id,
+                        messageId: callbackQuery.Message.MessageId,
+                        text: text,
+                        replyMarkup: inlineKeyboard);
+            }
+
+
+            else if (data[0] == "yss")
+            {
+                var serial = dataManager.itemSerials.GetItemSerialsById(Guid.Parse(data[1])).Result;
+                string text = serial.Name + " (" + serial.Year + ")" + "\n" + "\n" +
+                    serial.Description + "\n" + "\n" +
+                    "Кинопоиск:" + serial.RatingKP + "\n" +
+                    "IMDB:" + serial.RatingIMDB + "\n" + "\n" +
+                    "Выберите действие из списка ниже:";
+
+                List<InlineKeyboardButton[]> buttons = new List<InlineKeyboardButton[]>();
+                if (data.Count() > 2)
+                {
+                    buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Начать просмотр", "ss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+
+                    var user = dataManager.user.GetUserByIdUser(callbackQuery.From.Id).Result;
+                    if (user == null)
+                    {
+                        user = new BotMovieVort.Domain.Entity.User();
+                        await dataManager.user.SaveUser(user);
+                        buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "yss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                    }
+                    else
+                    {
+                        var ser = user.ItemSerials.FirstOrDefault(x => x.Id == Guid.Parse(data[1]));
+                        if (ser != null)
+                        {
+                            user.ItemSerials.Remove(ser);
+                            await dataManager.user.UpdateUser(user);
+                            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Получить уведомление при выходе нового сезона", "yss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                        }
+                        else
+                        {
+                            user.ItemSerials.Add(dataManager.itemSerials.GetItemSerialsById(Guid.Parse(data[1])).Result);
+                            buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Отключить уведомление при выходе нового сезона", "yss/" + data[1] + "/" + data[2] + "/" + data[3]) });
+                        }
+                    }
                     buttons.Add(new[] { InlineKeyboardButton.WithCallbackData("Назад к списку сериалов", data[2] + "/" + data[3]) });
                 }
                 else
@@ -484,7 +559,7 @@ public class Handlers
         ReplyKeyboardMarkup replyKeyboardMarkup = new(  
                 new[]
                 {
-                        new KeyboardButton[] { "Поиск", "Случайное" },
+                        new KeyboardButton[] { "Поиск" },
                         new KeyboardButton[] { "Фильмы", "Сериалы" },
                         new KeyboardButton[] { "Инструкция" }
                 })
